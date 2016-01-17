@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+<title>Zadanie Okresowe</title> 
+
+<script type="text/javascript">
+var idInterwalu;
+var idInterwalu1;
+
+
+function changeColor() {
+  idInterwalu = setInterval(changeColorText, 500);
+}
+
+function changeColorText() {
+  var elem = document.getElementById("my_color");
+  if (elem.style.color == 'blue') {
+    elem.style.color = 'yellow'; 
+  } else {
+    elem.style.color = 'blue'; 
+  } 
+}
+
+function stopChangecolor() {
+  clearInterval(idInterwalu);
+}
+
+function changeColor1() {
+  idInterwalu1 = setInterval(changeColorText1, 500);
+}
+
+function changeColorText1() {
+  var elem = document.getElementById("my_color1");
+  if (elem.style.color == 'red') {
+    elem.style.color = 'green'; 
+  } else {
+    elem.style.color = 'red'; 
+  } 
+}
+
+function stopChangecolor1() {
+  clearInterval(idInterwalu1);
+}
+
+</script>
+</head>
+
+<body onload="changeColor();">
+<div id="my_color">
+<h1><font face ="Times New Roman"><font size ="15">Czy 4 może być?</font></font></h1> 
+</div>
+<button onclick="stopChangecolor();">Stop</button> 
+<button onclick="changeColor();">Start</button> 
+
+
+
+<body onload="changeColor1();">
+<div id="my_color1">
+<h1><font face ="Times New Roman"><font size ="20">Owszem :)</font></font></h1> 
+</div>
+<button onclick="stopChangecolor1();">Stop</button> 
+<button onclick="changeColor1();">Start</button> 
+</body>
+</html>
